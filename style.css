@@ -1,3 +1,14 @@
-ul>li:not(:last-child) {
-  border-bottom: 3px solid pink;
+.outer {
+  width: 200px; height: 200px;
+  background-color: #eee;
+  
+  border-radius: 50%;
+  overflow: hidden;
+}
+.with-bg {
+  height: 100%;
+  background-image: url(1.jpg) ;
+  background-size: cover;
+
+  
 }
