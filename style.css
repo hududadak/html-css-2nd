@@ -1,13 +1,5 @@
-ol li:first-child,
-ol li:last-child{
-  color : greenyellow;
-}
-
-ol li:nth-child(even){
-  color: deeppink;
-}
-
-li:hover {
-  font-weight: bold;
-  color: blue;
+ul > li {
+  margin : 20px;
+  display: inline-block;
+  padding : 10px;
 }
