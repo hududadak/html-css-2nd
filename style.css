@@ -1,0 +1,38 @@
+/* 모든 요소 선택 */
+* {
+  font-weight: bold;
+  color: darkorange;
+}
+
+* {
+  color: plum;
+}
+
+p {
+  color: olivedrab;
+}
+
+.blue {
+  color: lightblue;
+}
+
+
+p.blue {
+  color: slateblue;
+}
+
+.blue.dark {
+  color: mediumblue;
+}
+
+p.blue.dark {
+  color: darkblue;
+}
+
+#red {
+  color: tomato;
+}
+
+span, .dark, #red {
+  text-decoration: underline;
+}
