@@ -1,8 +1,15 @@
 @import url(./shared.css);
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap');
+@font-face{
+  font-family: "MynotoSans";
+  src : url('./fonts/NotoSansKR-Regular')
+}
 
 body {
   margin: 0;
   padding: 24px;
+  font-family: 'East Sea Dokdo', sans-serif;
+  /* font-family: 'MynotoSans', sans-serif; */
 }
 
 p > strong{
