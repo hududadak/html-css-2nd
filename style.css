@@ -1,17 +1,42 @@
 @import url(./shared.css);
-@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap');
 @font-face{
   font-family: "MynotoSans";
   src : url('./fonts/NotoSansKR-Regular')
 }
 
 body {
-  margin: 0;
   padding: 24px;
-  font-family: 'East Sea Dokdo', sans-serif;
-  /* font-family: 'MynotoSans', sans-serif; */
+  font-family: 'MynotoSans', sans-serif;
 }
 
-p > strong{
-  color: var(--color-main);
+table {
+  border-collapse: collapse;
+  border-collapse: separate;
+
+  /* border-collapse가 collapse면 th, td의 border에 묻힘 */
+  border: 1px solid black;
+
+  /* border-collapse가 sepatate일 때 */
+  border-spacing: 0.5em;
+
+  caption-side: top;
+  caption-side: bottom;
+
+  table-layout: auto;
+  table-layout: fixed;
+}
+
+table{
+  width: 600px;
+}
+
+th, td {
+  border: 3px solid gray;
+}
+
+colgroup col:first-child {
+  width: 300px;
+}
+colgroup col:not(:first-child){
+  background-color: tomato;
 }
