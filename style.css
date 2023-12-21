@@ -1,55 +1,42 @@
-@import url(./shared.css);
-@font-face{
-  font-family: "MynotoSans";
-  src : url('./fonts/NotoSansKR-Regular')
+#square {
+  position: absolute;
+  top: 108px;
+  left: 24px;
+  width: 124px;
+  height: 124px;
+  border-radius: 10%;
+
+  transition: all 500ms ;
 }
 
-body {
-  margin: 0;
-  font-family: 'MynotoSans', sans-serif;
+label {
+  margin-right: 1em;
 }
 
-main { width: 100vw; }
-
-main > * {
-  padding: 0.8em;
-  color: slateblue;
-  background-color: lavender;
-}
-.sec-2 div {
-  display: grid;
-  margin: 1em;
-  padding: 1.6em;
-  line-height: 2.4em;
-  font-family: serif;
-  color: #555;
-  background-color: white;
+#left:not(:checked)~div {
+  left: 24px;
 }
 
-main{
-  display: grid;
-  gap :12px;
-  grid-template-columns: 200px 1fr 300px;
-  grid-template-rows: 80px 200px auto 200px;
+#left:checked~div {
+  left: 400px;
 }
 
-nav {
-  grid-column :1/-1;
-}
-aside{
-  grid-row: 2/4;
-}
-.sec-1{
-  grid-column: 2/4;
-}
-.sec-2{
-  grid-column: 2/3;
-  padding: 64px;
-}
-.sec-3{
-  grid-column: 3/4;
+#color:not(:checked)~div {
+  background-color: tomato;
 }
 
-footer{
-  grid-column: 1/-1;
+#color:checked~div {
+  background-color: dodgerblue;
+}
+
+#trans:not(:checked)~div {
+  transform: scale(1) rotate(0deg);
+}
+
+#trans:checked~div {
+  transform: scale(0.5) rotate(360deg);
+}
+
+p:first-of-type {
+  margin-top: 168px;
 }

@@ -1,39 +1,52 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>내 HTML</title>
 
-    <link rel="stylesheet" href="style.css">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>내 HTML</title>
+
+	<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
-  
+
+
 
 
 	<!-- 시작 -->
 
-	<main>
-    <nav>nav</nav>
-    <aside>aside</aside>
-    <section class="sec-1">.sec-1</section>
-    <section class="sec-2">
-      .sec-2
-      <div>
-        살어리 살어리랏다<br>쳥산애 살어리랏다<br>멀위랑 다래랑 먹고<br> 쳥산애 살어리랏다<br>얄리얄리 얄랑셩<br>얄라리 얄라<br>
-        우러라 우러라 새여<br>자고 니러 우러라 새여<br>널라와 시름 한 나도<br>자고 니러 우니로라<br>얄리얄리 얄라셩<br>얄라리 얄라<br>
-        가던 새 가던 새 본다<br>믈 아래 가던 새 본다<br>잉무든 장글란 가지고<br>믈 아래 가던 새 본다<br>얄리얄리 얄라셩<br>얄라리 얄라
-      </div>
-    </section>
-    <section class="sec-3">.sec-3</section>
-    <footer>footer</footer>
-  </main>
-	
-		<!-- 끝 -->
+	<h1>transition 속성</h1>
+
+	<input type="checkbox" id="left">
+	<label for="left">오른쪽으로 이동</label>
+
+	<input type="checkbox" id="color">
+	<label for="color">파랑색으로</label>
+
+	<input type="checkbox" id="trans">
+	<label for="trans">작게 회전</label>
+
+	<div id="square"></div>
+	<p>
+		<strong>transiton</strong> 속성은 CSS 값이 달라질 때 요소에 어떤 효과로 반영될지 지정합니다. <br>
+		<em>속성</em>, <em>지속시간</em>, <em>시간함수</em>, <em>지연시간</em> 순으로 값을 넣을 수 있습니다.
+	</p>
+	<p>
+		<strong>주의!</strong> 적용할 CSS 속성이 이미 기존값이 적용되어 있어야 동작합니다.
+	</p>
+	<a href="https://developer.mozilla.org/ko/docs/Web/CSS/transition" target="_blank">
+		👉 MDN 문서 보기
+	</a>
+	<br>
+	<a href="https://cubic-bezier.com/" target="_blank">
+		👉 cubic-bezier 값 생성기
+	</a>
+	<!-- 끝 -->
 
 
 
 
 </body>
+
 </html>
