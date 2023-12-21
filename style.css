@@ -1,42 +1,86 @@
-#square {
-  position: absolute;
-  top: 108px;
-  left: 24px;
-  width: 124px;
-  height: 124px;
-  border-radius: 10%;
-
-  transition: all 500ms ;
+body {
+  margin: 36px;
 }
 
-label {
-  margin-right: 1em;
-}
-
-#left:not(:checked)~div {
-  left: 24px;
-}
-
-#left:checked~div {
-  left: 400px;
-}
-
-#color:not(:checked)~div {
+button {
+  all: unset;
+  margin-bottom: 2em;
+  padding: 0 2em;
+  height: 64px;
+  line-height: 64px;
+  font-size: 1.2em;
+  color: white;
   background-color: tomato;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
-#color:checked~div {
+#loading {
+  position: relative;
+  width: 600px;
+  height: 40px;
+  background-color: lightblue;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#loading>div {
+  display: flex;
+  width: 200%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#loading>div>div {
+  flex-grow: 1;
+}
+
+#loading>div>div:nth-child(odd) {
   background-color: dodgerblue;
 }
 
-#trans:not(:checked)~div {
-  transform: scale(1) rotate(0deg);
+
+button._1:hover {
+  border-radius: 32px;
+  background-color: plum;
 }
 
-#trans:checked~div {
-  transform: scale(0.5) rotate(360deg);
+button._1{
+  transition: all 500ms;
 }
 
-p:first-of-type {
-  margin-top: 168px;
+button._2:hover {
+  animation-name: second;
+  animation-duration: 200ms;
+}
+
+@keyframes second {
+  from{
+    transform: scale(100%);
+  }
+
+  50% {
+    transform: scale(110%);
+  }
+
+  to{
+    transform: scale(100%);
+  }
+}
+
+#loading > div{
+  transform: skew(-20deg);
+  animation: third 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes third {
+  from{
+    left : -600px;
+  }
+  to{
+    left : 0;
+  }
 }
