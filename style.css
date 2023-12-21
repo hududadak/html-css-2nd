@@ -1,86 +1,86 @@
 body {
-  margin: 36px;
+  margin: 0;
 }
 
-button {
-  all: unset;
-  margin-bottom: 2em;
-  padding: 0 2em;
+#wrapper {
+  display: grid;
+  gap: 12px;
+}
+
+#wrapper>* {
+  padding: 1em;
+  font-size: 1.2em;
+  color: royalblue;
+  font-weight: bold;
+  background-color: lightblue;
+}
+
+header {
+  position: relative;
+  min-width: 80px;
+}
+
+nav ul {
+  padding-left: 0.5em;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 1em;
+  color: #333;
+}
+
+#menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
   height: 64px;
   line-height: 64px;
-  font-size: 1.2em;
-  color: white;
-  background-color: tomato;
-  border-radius: 8px;
+  color: #333;
   cursor: pointer;
 }
 
-#loading {
-  position: relative;
-  width: 600px;
-  height: 40px;
-  background-color: lightblue;
-  border-radius: 20px;
-  overflow: hidden;
+main div {
+  margin: 1em;
+  padding: 1em;
+  height: 67vh;
+  color: #333;
+  font-weight: normal;
+  background-color: yellow;
 }
 
-#loading>div {
-  display: flex;
-  width: 200%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+footer {
+  height: 200px;
 }
 
-#loading>div>div {
-  flex-grow: 1;
-}
-
-#loading>div>div:nth-child(odd) {
-  background-color: dodgerblue;
-}
-
-
-button._1:hover {
-  border-radius: 32px;
-  background-color: plum;
-}
-
-button._1{
-  transition: all 500ms;
-}
-
-button._2:hover {
-  animation-name: second;
-  animation-duration: 200ms;
-}
-
-@keyframes second {
-  from{
-    transform: scale(100%);
+@media (max-width : 768px) {
+  nav {
+    display: none;
   }
 
-  50% {
-    transform: scale(110%);
+  #menu:hover+nav {
+    display: inherit;
   }
 
-  to{
-    transform: scale(100%);
+  nav ul li {
+    display: block;
+    text-align: right;
+    padding: 0.5em 0;
   }
 }
 
-#loading > div{
-  transform: skew(-20deg);
-  animation: third 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-@keyframes third {
-  from{
-    left : -600px;
+@media (min-width : 769px) {
+
+  #menu {
+    display: none;
   }
-  to{
-    left : 0;
+
+  #wrapper{
+    grid-template-columns: 200px 1fr;
+  }
+
+  header, footer{
+    grid-column: 1 / -1;
   }
 }
